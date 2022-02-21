@@ -43,6 +43,7 @@ void __attribute__((__interrupt__, __auto_psv__)) _T2Interrupt(void) {
     lcd_setCursor(0, 0);
 	unsigned long data = getAvg();
     char dataStr[20];
+    //sprintf(dataStr, "%6f", (1.0 * data)/* / 1023*/);
 	sprintf(dataStr, "%6.4f V", (3.3 * data) / 1023);
 	lcd_printStr(dataStr);
 }
@@ -89,8 +90,8 @@ void setup() {
     T3CON = 0;
     TMR3 = 0;
     T3CONbits.TCKPS = 0b10; // pre 64
-    PR3 = (1 / K_CONST) / (.0000000625 * 64) - 1;
-    PR3 = 1000;//15624; // 16 samples per second
+    //PR3 = (1 / K_CONST) / (.0000000625 * 64) - 1;
+    PR3 = 500;//15624; // 16 samples per second
     T3CONbits.TON = 1;
 
     IEC0bits.AD1IE = 1;

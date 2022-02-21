@@ -187,9 +187,9 @@ section                    address   length (PC units)   length (bytes) (dec)
 .const                      0x1a0e                 0xc            0x12  (18)
 .text                       0x1a1a               0x172           0x22b  (555)
 .dinit                      0x1b8c               0x106           0x189  (393)
-.text                       0x1c92               0x1ae           0x285  (645)
+.text                       0x1c92               0x1ac           0x282  (642)
 
-                 Total "program" memory used (bytes):         0x2a60  (10848) 16%
+                 Total "program" memory used (bytes):         0x2a5d  (10845) 16%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -329,10 +329,10 @@ External Symbols in Program Memory (by address):
                   0x001cb4                  _putVal
                   0x001cdc                  _getAvg
                   0x001d44                  _setup
-                  0x001dde                  _main
-                  0x001de8                  _delay_ms
-                  0x001e08                  _delay_us
-                  0x001e28                  _pic24_init
+                  0x001ddc                  _main
+                  0x001de6                  _delay_ms
+                  0x001e06                  _delay_us
+                  0x001e26                  _pic24_init
 
 External Symbols in Program Memory (by name):
 
@@ -398,8 +398,8 @@ External Symbols in Program Memory (by name):
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
                   0x000666                  __sprintf_fF
-                  0x001de8                  _delay_ms
-                  0x001e08                  _delay_us
+                  0x001de6                  _delay_ms
+                  0x001e06                  _delay_us
                   0x00104c                  _div
                   0x000a02                  _efwrite
                   0x001184                  _fclose
@@ -414,10 +414,10 @@ External Symbols in Program Memory (by name):
                   0x001a96                  _lcd_setCursor
                   0x001b06                  _lcd_shiftScreen
                   0x001062                  _ldiv
-                  0x001dde                  _main
+                  0x001ddc                  _main
                   0x0013ae                  _malloc
                   0x000824                  _memcpy
-                  0x001e28                  _pic24_init
+                  0x001e26                  _pic24_init
                   0x001cb4                  _putVal
                   0x001d44                  _setup
                   0x000832                  _strchr
@@ -687,12 +687,12 @@ __CONFIG1
  .debug_abbrev    0x0001f2         0x86 build/default/production/EE3102_Project_cbLib_v001.o
  .debug_abbrev    0x000278        0x17e build/default/production/EE3102_Project_main_v001.o
 
-.debug_line       0x000000        0x4b0
+.debug_line       0x000000        0x4af
  *(.debug_line)
  .debug_line      0x000000        0x124 build/default/production/EE3102_Project_genLib_v001.o
  .debug_line      0x000124        0x176 build/default/production/EE3102_Project_lcdLib_v001.o
  .debug_line      0x00029a         0x7b build/default/production/EE3102_Project_cbLib_v001.o
- .debug_line      0x000315        0x19b build/default/production/EE3102_Project_main_v001.o
+ .debug_line      0x000315        0x19a build/default/production/EE3102_Project_main_v001.o
 
 .debug_frame      0x000000        0x270
  *(.debug_frame)
@@ -1538,15 +1538,15 @@ __c30_signature
 .dinit            0x001b8c        0x106
  .dinit           0x001b8c        0x106 data_init
 
-.text             0x001c92        0x1ae
+.text             0x001c92        0x1ac
  .text            0x001c92         0xb2 build/default/production/EE3102_Project_cbLib_v001.o
                   0x001c92                  _initBuffer
                   0x001cb4                  _putVal
                   0x001cdc                  _getAvg
- .text            0x001d44         0xa4 build/default/production/EE3102_Project_main_v001.o
+ .text            0x001d44         0xa2 build/default/production/EE3102_Project_main_v001.o
                   0x001d44                  _setup
-                  0x001dde                  _main
- .text            0x001de8         0x58 build/default/production/EE3102_Project_genLib_v001.o
-                  0x001de8                  _delay_ms
-                  0x001e08                  _delay_us
-                  0x001e28                  _pic24_init
+                  0x001ddc                  _main
+ .text            0x001de6         0x58 build/default/production/EE3102_Project_genLib_v001.o
+                  0x001de6                  _delay_ms
+                  0x001e06                  _delay_us
+                  0x001e26                  _pic24_init
