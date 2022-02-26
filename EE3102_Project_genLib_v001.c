@@ -25,6 +25,6 @@ void delay_us(unsigned int us){
 void pic24_init(void){
     _RCDIV = 0;
     AD1PCFG = 0x9ffe;
-    TRISA |= 1; // RA0 input
+    TRISA |= 0b11; // RA0 input
 }
 

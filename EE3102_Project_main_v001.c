@@ -42,7 +42,7 @@ void __attribute__((__interrupt__, __auto_psv__)) _T2Interrupt(void) {
     
     lcd_setCursor(0, 0);
 	unsigned long data = getAvg();
-    char dataStr[20];
+    char dataStr[20]; 
     //sprintf(dataStr, "%6f", (1.0 * data)/* / 1023*/);
 	sprintf(dataStr, "%6.4f V", (3.3 * data) / 1023);
 	lcd_printStr(dataStr);
@@ -68,6 +68,7 @@ void setup() {
     AD1CON2bits.CSCNA = 0; // do not scan
     AD1CON2bits.SMPI = 0;
     AD1CON2bits.BUFM = 0;
+    //AD1CON2bits.VCFG = 0b0101;
 
     AD1CON3 = 0;
     AD1CON3bits.ADRC = 0; // system clock
