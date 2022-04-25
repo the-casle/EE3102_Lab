@@ -44,7 +44,13 @@ void __attribute__((__interrupt__, __auto_psv__)) _T2Interrupt(void) {
 	unsigned long data = getAvg();
     char dataStr[20]; 
     //sprintf(dataStr, "%6f", (1.0 * data)/* / 1023*/);
-	sprintf(dataStr, "%6f mA", ((1/18.74) * (data - 64.0)));
+    double linearized = 0;
+    if(data <= 909){
+        linearized = (1/35.391) * (data) + 2;
+    } else if(data < 1023){
+        linearized = (1/3.0516) * (data) - 277;
+    }
+	sprintf(dataStr, "%6f mA", (1.0 * linearized));
 	lcd_printStr(dataStr);
 }
 
